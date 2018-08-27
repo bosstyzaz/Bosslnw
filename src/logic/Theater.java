@@ -2,6 +2,15 @@ package logic;
 
 import java.util.ArrayList;
 
+/*
+This class is just one of many theaters in a cinema complex.
+It contains the information about the movie showing in this theater, showtime, and seats of each showtime.
+This class is like a low-level worker when compared to the boss that is CinemaComplex Class.
+It receives the order like... book a ticket for this man please!.. 
+and then it checks if that seat of that showtime is occupied or not. If not, this class books that seat and tell the boss DONE!!!
+Something like that... 
+*/
+
 public class Theater {
 	
 	private class ShowtimeInfo {

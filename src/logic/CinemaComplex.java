@@ -3,6 +3,15 @@ package logic;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+This class is literally a cinema complex!
+It contains all the info you need about the cinema complex: movies, theaters, tickets.
+You want to book a ticket? call a method in this class.
+You want to know what movies they're showing? call a method in this class.
+You want to view all the tickets you booked previously? call a method in this class.
+You want to add new movie/theater/showtime? also call a method in this class.
+*/
+
 public class CinemaComplex {
 	
 	public static int TIMESLOT = 12;
@@ -162,7 +171,7 @@ public class CinemaComplex {
 		theaters.add(theater);
 	}
 	
-	public void AssignMovieAndShowtimeToTheater(String programInfo) {
+	public void assignMovieAndShowtimeToTheater(String programInfo) {
 		String[] info = programInfo.split(",");
 		
 		//check if theater number is valid

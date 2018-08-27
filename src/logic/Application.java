@@ -6,6 +6,14 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.util.Scanner;
 
+/*
+Application class has main method that controls the flow of this program.
+It reads a text file to create all necessary information to get this app up and running.
+After that, it shows main menu and asks users what they want to do. 
+When received order from users, it calls methods in CinemaComplex to the task.
+After the task is done, it brings users back to main menu.
+*/
+
 public class Application {
 	
 	public static CinemaComplex CINEMACOMPLEX = new CinemaComplex();
@@ -96,7 +104,7 @@ public class Application {
 						CINEMACOMPLEX.createTheater(thisLine);
 					}
 					else {
-						CINEMACOMPLEX.AssignMovieAndShowtimeToTheater(thisLine);
+						CINEMACOMPLEX.assignMovieAndShowtimeToTheater(thisLine);
 					}
 				}
 			}
