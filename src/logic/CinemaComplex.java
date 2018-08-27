@@ -129,7 +129,7 @@ public class CinemaComplex {
 		int row = keyboard.nextInt();
 		System.out.print("Column: ");
 		int column = keyboard.nextInt();
-		while (/* missing condition */) {
+		while (/* a missing condition */) {
 			System.out.println("!!! Row or column is invalid. Please try again !!!");
 			System.out.print("Row: ");
 			row = keyboard.nextInt();
