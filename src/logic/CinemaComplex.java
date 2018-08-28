@@ -148,8 +148,28 @@ public class CinemaComplex {
 		
 		/// create a ticket object & add it to tickets arraylist here ///
 		
-		/////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////
 		System.out.println("--- Booking Completed ---");
+	}
+	
+	public boolean handleBookingProcess(int theaterNumber, String movieName, int startTimeSlot, int row, int column) {
+		Theater theater = null;
+		for (int i = 0; i < theaters.size(); i++) {
+			Theater tempTheater = theaters.get(i); 
+			if (tempTheater.getMovie() != null && tempTheater.getMovie().getName().equals(movieName) 
+					&& theaterNumber == tempTheater.getTheaterNumber()) {
+				theater = tempTheater;
+				break;
+			}
+		}
+		if (theater == null) {
+			return false;
+		}	
+		boolean bookingSuccess = theater.bookSeat(startTimeSlot, row, column);
+		/// create a ticket object & add it to tickets arraylist here ///
+		
+		/////////////////////////////////////////////////////////////////
+		return bookingSuccess;
 	}
 	
 	/// implement showAllTickets method here ///

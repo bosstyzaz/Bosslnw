@@ -108,12 +108,15 @@ public class Application {
 					}
 				}
 			}
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 		    e.printStackTrace();
-		} finally {
+		} 
+		finally {
 		    try {
 		        fileReader.close();
-		    } catch (IOException e) {
+		    } 
+		    catch (IOException e) {
 		        e.printStackTrace();
 		    }
 		}
