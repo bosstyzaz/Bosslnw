@@ -2,7 +2,7 @@
 
 1. Using a git command to clone this repository to your local computer.
 2. Open Eclipse and then "import existing project" from the cloned folder (In Step 1) into your Eclipse workspace.
-3. Rename an Eclipse Java project named **`2110215_Lab1_2018_{ID}_{FIRSTNAME}`** (Example: **`2110215_Lab1_2018_6031234521_John`**).
+3. Rename the project to **`2110215_Lab1_2018_{ID}_{FIRSTNAME}`** (Example: **`2110215_Lab1_2018_6031234521_John`**).
 4. Implement all the classes and methods following the details given in the problem statement file which you can download from CourseVille.
     - You should create commits with meaningful messages when you finish each part of your program.
     - Don't wait until you finish all features to create a commit.
