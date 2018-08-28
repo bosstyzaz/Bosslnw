@@ -1,4 +1,4 @@
-package test;
+package test.grader;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,8 +28,8 @@ class CinemaComplexTestCase {
 	@BeforeEach
 	void setUp() throws Exception {
 		Application.readMovieProgram();
-		outputFile = new File("src/TicketOutput.txt");
-		expectedOutputFile = new File("src/ExpectedTicketOutput.txt");
+		outputFile = new File("src/test/grader/TicketOutput.txt");
+		expectedOutputFile = new File("src/test/grader/ExpectedTicketOutput.txt");
 		fileStream = new PrintStream(new FileOutputStream(outputFile));
 		System.setOut(fileStream);
 	}
