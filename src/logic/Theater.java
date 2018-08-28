@@ -119,6 +119,9 @@ public class Theater {
 	public void clearMovie() {
 		this.movie = null;
 		showtimeInfos.clear();
+		for (int i = 0; i < CinemaComplex.TIMESLOT; i++) {
+			occupiedTimeSlot[i] = false;
+		}
 	}
 	
 	public int howManyShowtime() {
