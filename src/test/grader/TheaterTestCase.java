@@ -68,6 +68,7 @@ class TheaterTestCase {
 		assertEquals(1, theater.howManyShowtime());
 		assertTrue(theater.isValidShowtime(3, 3));
 		
+		//change max timeslot
 		CinemaComplex.TIMESLOT = 15;
 		theater = new Theater(2, 2, 3);
 		theater.setMovie(movie);
