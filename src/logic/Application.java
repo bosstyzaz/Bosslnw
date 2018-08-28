@@ -18,6 +18,7 @@ public class Application {
 	
 	public static CinemaComplex CINEMACOMPLEX = new CinemaComplex();
 	public static Scanner KEYBOARD = new Scanner(System.in);
+	public static String inputFile = "src/MovieProgram.txt";
 
 	public static void main(String[] args) {
 		int menuInput = 0;
@@ -78,7 +79,7 @@ public class Application {
 		BufferedReader fileReader = null;
 		String thisLine = null;
 		try {
-			file = new File("src/MovieProgram.txt");
+			file = new File(inputFile);
 			fileReader = new BufferedReader(new FileReader(file));
 			while ((thisLine = fileReader.readLine()) != null) {
 				if (thisLine.trim().equals("---Movie List---")) {
