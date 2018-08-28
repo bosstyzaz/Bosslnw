@@ -58,6 +58,16 @@ class TheaterTestCase {
 		assertFalse(theater.isValidShowtime(3, 5));
 		assertFalse(theater.isValidShowtime(5, 8));
 		
+		//change to the movie with length 1.
+		Movie newMovie = new Movie("Pokemon: The Movie", 1);
+		theater.setMovie(newMovie);
+		assertEquals(0, theater.howManyShowtime());
+		theater.addShowTime(0, 0);
+		assertEquals(0, theater.howManyShowtime());
+		theater.addShowTime(3, 3);
+		assertEquals(1, theater.howManyShowtime());
+		assertTrue(theater.isValidShowtime(3, 3));
+		
 		CinemaComplex.TIMESLOT = 15;
 		theater = new Theater(2, 2, 3);
 		theater.setMovie(movie);
