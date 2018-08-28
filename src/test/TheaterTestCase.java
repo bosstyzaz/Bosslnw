@@ -67,26 +67,6 @@ class TheaterTestCase {
 	}
 
 	@Test
-	void testDisplaySeats() {
-		theater.setMovie(movie);
-		theater.addShowTime(1, 3);
-		assertFalse(theater.displaySeats(2));
-		assertTrue(theater.displaySeats(1));
-		
-		//book some seats
-		theater.bookSeat(1, 1, 1);
-		theater.bookSeat(1, 1, 2);
-		theater.bookSeat(1, 1, 3);
-		assertTrue(theater.displaySeats(1));
-		
-		//make theater full
-		theater.bookSeat(1, 2, 1);
-		theater.bookSeat(1, 2, 2);
-		theater.bookSeat(1, 2, 3);		
-		assertFalse(theater.displaySeats(1));
-	}
-
-	@Test
 	void testBookSeat() {
 		theater.setMovie(movie);
 		theater.addShowTime(1, 3);
