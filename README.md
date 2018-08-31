@@ -7,7 +7,8 @@
     - You should create commits with meaningful messages when you finish each part of your program.
     - Don't wait until you finish all features to create a commit.
 5. Test your codes with the provided JUnit test cases, they are inside package **`test.grader`**.
-    - If you want to create your own test cases, please put them inside package **`test.student`**. 
+    - If you want to create your own test cases, please put them inside package **`test.student`**.
+    - Aside from passing all test cases, your program must also be able to run properly without any runtime errors.
 6. After finishing the program, create a UML Diagram using **`ObjectAid`** and put the result image (UML.png) at the root of your project folder.
-7. Export your project into a runnable jar file called **`Lab1_2018_{ID}`** (Example: **`Lab1_2018_6031234521.jar`**)
+7. Export your project into a runnable jar file called **`Lab1_2018_{ID}`** (Example: **`Lab1_2018_6031234521.jar`**) and place it at the root of your project.
 8. Push all your commits to your GitHub repository.
