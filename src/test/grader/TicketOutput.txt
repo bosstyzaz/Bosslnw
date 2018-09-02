@@ -1,0 +1,7 @@
+Theater: 1, Movie: Hataraku Saibou: The Movie, Time: 1, Seat:1/1
+Theater: 3, Movie: Hataraku Saibou: The Movie, Time: 3, Seat:2/1
+Theater: 2, Movie: The Hobbit: Maple Films Cut, Time: 9, Seat:2/1
+Theater: 2, Movie: The Hobbit: Maple Films Cut, Time: 9, Seat:2/2
+Theater: 1, Movie: Hataraku Saibou: The Movie, Time: 7, Seat:1/1
+Theater: 2, Movie: The Hobbit: Maple Films Cut, Time: 5, Seat:1/1
+Theater: 2, Movie: The Hobbit: Maple Films Cut, Time: 5, Seat:1/2

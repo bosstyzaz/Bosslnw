@@ -14,14 +14,29 @@ Something like that...
 public class Theater {
 	
 	private class ShowtimeInfo {
-		int startTimeSlot;
-		int endTimeSlot;
-		boolean isFull;
-		boolean[][] seats;
+		private int startTimeSlot;
+		private int endTimeSlot;
+		private boolean isFull;
+		private boolean[][] seats;
+		private int n ;
+		private int mx ;
 		
 		/// implement the constructor here ///
-		
-		//////////////////////////////////////
+		public ShowtimeInfo(int startTimeSlot,int endTimeslot){
+			this.startTimeSlot = startTimeSlot ;
+			this.endTimeSlot = endTimeslot ;
+			this.isFull = false ;
+			this.seats = new boolean [totalRow][totalColumn] ;
+			n = 0;
+			mx = totalRow * totalColumn;
+		}
+		public void setSeat(int row, int col){
+			seats[row][col] = true;
+			n++;
+			if (n == mx)
+				isFull = true;
+			return;
+		}
 	}
 	
 	private int theaterNumber;
@@ -50,12 +65,39 @@ public class Theater {
 	}
 	
 	/// implement method addShowTime here ///
-	
-	/////////////////////////////////////////
+	public void addShowTime(int start ,int end) {
+		if( movie== null) {
+			return ;
+		}
+		if((start<1)||(end<start)||(end>CinemaComplex.TIMESLOT)) {
+			return ;
+		}
+		if(getMovie().getLength()!=(end-start+1)) {
+			return ;
+		}
+		for (int i = 0; i < showtimeInfos.size(); i++)
+		{
+			if (start >= showtimeInfos.get(i).startTimeSlot && start <= showtimeInfos.get(i).endTimeSlot)
+				return;
+		}
+		ShowtimeInfo sti = new ShowtimeInfo(start, end);
+		showtimeInfos.add(sti);
+	}
 	
 	/// implement method bookSeat here ///
-	
-	//////////////////////////////////////
+	public boolean bookSeat(int st, int row, int col) {
+		if (row < 1 || col < 1 || row > totalRow || col > totalColumn)
+			return false;
+		ShowtimeInfo showTime = getShowtimeInfo(st);
+		if (showTime == null)
+			return false;
+		if (st < 1 || st > CinemaComplex.TIMESLOT || showTime.isFull)
+			return false;
+		if (isSeatOccupied(st, row, col))
+			return false;
+		showTime.setSeat(row - 1, col - 1);
+		return true;
+	}
 	
 	public boolean displaySeats(int startTimeSlot) {
 		//check if startTimeSlot are valid

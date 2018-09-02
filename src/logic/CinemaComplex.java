@@ -138,7 +138,7 @@ public class CinemaComplex {
 		int row = keyboard.nextInt();
 		System.out.print("Column: ");
 		int column = keyboard.nextInt();
-		while (/* a missing condition */) {
+		while (!theater.bookSeat(startTimeSlot, row, column)) {
 			System.out.println("!!! Row or column is invalid. Please try again !!!");
 			System.out.print("Row: ");
 			row = keyboard.nextInt();
@@ -147,7 +147,8 @@ public class CinemaComplex {
 		}
 		
 		/// create a ticket object & add it to tickets arraylist here ///
-		
+		Ticket ticket = new Ticket(theater.getTheaterNumber(), movieName, startTimeSlot, row, column);
+		tickets.add(ticket);
 		/////////////////////////////////////////////////////////////////
 		System.out.println("--- Booking Completed ---");
 	}
@@ -167,13 +168,23 @@ public class CinemaComplex {
 		}	
 		boolean bookingSuccess = theater.bookSeat(startTimeSlot, row, column);
 		/// create a ticket object & add it to tickets arraylist here ///
-		
+		if (bookingSuccess)
+		{
+			Ticket ticket = new Ticket(theater.getTheaterNumber(), movieName, startTimeSlot, row, column);
+			tickets.add(ticket);
+		}
 		/////////////////////////////////////////////////////////////////
 		return bookingSuccess;
 	}
 	
 	/// implement showAllTickets method here ///
-	
+	public void showAllTickets()
+	{
+		for (int ii = 0; ii < tickets.size(); ii++)
+		{
+			System.out.println(tickets.get(ii));
+		}
+	}
 	////////////////////////////////////////////
 	
 	public void createMovie(String movieInfo) {
@@ -230,6 +241,7 @@ public class CinemaComplex {
 			int startTimeSlot = Integer.parseInt(time.substring(0, dashIndex));
 			int endTimeSlot = Integer.parseInt(time.substring(dashIndex + 1));
 			/* a missing line */
+			theater.addShowTime(startTimeSlot, endTimeSlot);
 		}
 		if (theater.howManyShowtime() == 0) {
 			theater.clearMovie();
